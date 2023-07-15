@@ -1,0 +1,65 @@
+@import '../../mixin/Mixin.module.scss';
+
+.container{
+    width: 40%;
+    margin: 50px 30%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    align-items: center;
+    font-family: 'Light'; 
+
+    @include responsive(tablet){
+        width: 600px;
+        margin: 40px 16%;
+    }
+
+    @include responsive(mobile){
+        width: 90%;
+        margin: 56px 15%;
+    }
+
+}
+.info{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    p{
+        margin: 3px 0 0 0;
+        font-size: 14px;
+
+        @include responsive(mobile){
+            font-size: 12px;
+        }
+    }
+    img{
+        border-radius: 50%;
+        width: 70%;
+        height: 80%;
+        border: 3px solid #E1306C;
+        cursor: pointer;
+
+        @include responsive(mobile){
+            width: 80%;
+        }
+    }
+    .cf{
+        border: 3px solid rgb(6, 167, 6);
+    }
+    
+    @include responsive(tablet){
+        img{
+            width: 75%;
+            height: 85%;
+        }        
+    }
+}
+
+#infoHidden{
+    @include responsive(mobile){
+        display: none;
+    }
+}

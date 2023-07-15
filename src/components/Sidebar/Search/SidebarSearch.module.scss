@@ -1,0 +1,91 @@
+@import '../../../mixin/Mixin.module.scss';
+
+.side{
+    background-color: #000;
+    border-right: 1px solid rgba(192, 192, 192, 0.203);
+    border-radius: 24px;
+    position: fixed;
+    width: 400px;
+    transform: translate(20%, 0);
+    padding: 0 10px;
+    height: 100%;
+    z-index: 99;
+
+    h2{
+        color: #fff;
+        font-family: 'Bold';
+        margin-left: 16px;
+    }
+
+    input{
+        background-color: #1A1A1A;
+        width: 93%;
+        border: 0;
+        height: 40px;
+        border-radius: 8px;
+        padding: 0 8px;
+        margin: 20px 0 20px 16px;
+    }
+
+    hr{
+        border-color: rgba(192, 192, 192, 0.203);
+    }
+
+    @include responsive(tablet){
+        transform: translate(22%, 0);
+
+        hr{
+            width: 400px;
+            margin-left: -15px;
+        }
+    }
+
+    @include responsive(mobile){
+        width: 100%;
+        transform: translate(0);
+        z-index: 98;
+    }
+
+}
+.recents{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+
+    :nth-child(1){
+        font-family: 'Bold';
+        margin-left: 8px;
+    }
+
+    :nth-child(2){
+        font-family: 'Medium';
+        color: #0095f6;
+        cursor: pointer;
+        &:hover{color: #fff;}
+    }
+}
+
+.profileSide{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+    &:hover{background-color: #1A1A1A;}
+
+    img{
+        border-radius: 50%;
+        width: 15%;
+        margin-left: 8px;
+    }
+    p{
+        color: #fff;
+        font-family: 'Bold';
+        margin: 0 0 0 16px;
+    }
+    span{
+        color: #a8a8a8;
+        margin: 0 0 0 16px;
+        font-family: 'Regular';
+    }
+}

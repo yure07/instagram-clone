@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Regular';
+  src: url(./fonts/INSTAGRAMSANS-REGULAR.TTF);
+}
+@font-face {
+  font-family: 'Regular-Condensed';
+  src: url(./fonts//INSTAGRAMSANSCONDENSED-REGULAR.TTF);
+}
+@font-face {
+  font-family: 'Medium';
+  src: url(./fonts/INSTAGRAMSANS-MEDIUM.TTF);
+}
+@font-face {
+  font-family: 'Light';
+  src: url(./fonts/INSTAGRAMSANS-LIGHT.TTF);
+}
+@font-face {
+  font-family: 'Bold';
+  src: url(./fonts/INSTAGRAMSANS-BOLD.TTF);
+}
+@font-face {
+  font-family: 'Condensed-Bold';
+  src: url(./fonts/INSTAGRAMSANSCONDENSED-BOLD.TTF);
+}
+
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+a{text-decoration: none; color: #fff;}
+
+::-webkit-scrollbar{
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffffff6d;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #413f3fbf;
+  
+}

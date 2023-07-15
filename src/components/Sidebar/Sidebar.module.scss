@@ -1,0 +1,129 @@
+@import '../../mixin/Mixin.module.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 17.5%;
+    height: 100%;
+    padding: 40px 20px;
+    position: fixed;
+    background-color: black;
+    border-right: 1px solid rgba(192, 192, 192, 0.203);
+    color: #fff;
+    font-family: 'Regular';
+
+    img{
+        width: 40%;
+    }
+
+    .logoPhone{
+        display: none;
+    }
+    
+    @include responsive(tablet){
+        width: 80px;
+
+        .logoName{
+            display: none;
+        }
+
+        .logoPhone{
+            display: block;
+            width: 30px;
+            align-self: center;
+        }
+
+        span{display: none;}
+    }
+
+    @include responsive(mobile){
+        display: none;
+    }
+}
+
+.containerLess{
+    width: 80px;
+    transition: all 0s;
+
+    .links{
+        width: 40px;
+        margin-left: -5px;
+    }
+
+    span{
+        display: none;
+    }
+
+    img{
+        width: 30px;
+    }
+
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    .toProfile{ margin-top: -16px;}
+
+    #explore{
+        margin-top: 5px;
+    }
+
+    p{
+        font-size: 18px;
+        display: flex;
+        margin: 10px 0 8px 0;
+        align-items: center;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        .messages{
+            background-color: rgb(225, 40, 40);
+            position: absolute;
+            font-size: 12px;
+            padding: 2px 5px;
+            margin-top: -25px;
+            border-radius: 8px;
+            left: 45px;
+        }
+
+        &:nth-child(1){
+            margin-top: 30px;
+        }
+        &:hover{
+            background-color: #1A1A1A;
+        }
+
+        img{
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+        }
+    }
+    .profile{border-radius: 50%;}
+}
+
+.more{
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    width: 85%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: #1A1A1A;
+    }
+
+    img{
+        width: 30px;
+        margin-right: 15px;
+    }
+}

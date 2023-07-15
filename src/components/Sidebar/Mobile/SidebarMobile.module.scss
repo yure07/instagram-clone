@@ -1,0 +1,74 @@
+@import '../../../mixin/Mixin.module.scss';
+
+.container{
+    display: none;
+
+    @include responsive(tablet){
+        display: none;
+    }
+
+    @include responsive(mobile){
+        display: flex;
+        width: 100%;
+    }
+
+    img{
+        cursor: pointer;
+    }
+}
+
+.containerTop{
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 0 32px;
+        border-bottom: 1px solid rgba(192, 192, 192, 0.203);
+        height: 45px;
+        color: #fff;
+        justify-content: space-between;
+
+        img{
+            width: 100px;
+        }
+
+        .iconsTop{
+            width: 65px;
+            display: flex;
+            justify-content: space-between;
+
+            img{
+                width: 35%;
+            }
+        }
+}
+
+.containerBottom{
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    padding: 8px 32px;
+    border-top: 1px solid rgba(192, 192, 192, 0.203);
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+        width: 25px;
+    }
+
+    img{
+        width: 7%;
+    }
+
+    .profilePhoto{
+        border-radius: 50%;
+        width: 100%;
+    }
+
+    .homeIcon{
+        width: 100%;
+    }
+}

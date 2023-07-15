@@ -1,0 +1,39 @@
+@import '../../mixin/Mixin.module.scss';
+
+.galerySection{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: translate(32%, 5%);
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 0;
+
+    img{
+        justify-self: center;
+        cursor: pointer;
+        width: 100%;
+        
+        &:hover{
+            opacity: .6;
+        }
+    }
+
+    @include responsive(tablet){
+        width: 84%;
+        transform: translate(14%, 1%);
+
+        img{
+            width: 100%;
+        }
+    }
+
+    @include responsive(mobile){
+        width: 75%;
+        transform: translate(24%, 3%);
+
+        img{
+            width: 100%;
+        }
+    }
+}

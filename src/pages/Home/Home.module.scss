@@ -1,0 +1,9 @@
+@import '../../mixin/Mixin.module.scss';
+
+.container{
+    @include responsive(mobile){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

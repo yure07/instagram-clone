@@ -1,0 +1,19 @@
+@mixin responsive($screenType){ // o content se refere a formatacao passada
+    @if $screenType == mobile {
+        @media screen and (width <= 767px){
+            @content 
+        }
+    } @else if $screenType == tablet {
+        @media screen and (min-width: 768px) and (max-width: 1263px){
+            @content
+        }
+    } @else if $screenType == notebook {
+        @media screen and (min-width: 1300px){
+            @content
+        }
+    } @else if $screenType == special {
+        @media screen and (width <= 1440px){
+            @content
+        }
+    }
+};

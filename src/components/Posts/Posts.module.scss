@@ -1,0 +1,136 @@
+@import '../../mixin/Mixin.module.scss';
+
+.container{
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 10% 37%;
+
+    hr{
+        border: 1px solid rgba(192, 192, 192, 0.203);
+        width: 100%;
+    }
+
+    @include responsive(tablet){
+        margin: 18% 26%;
+        width: 450px;
+    }
+
+    @include responsive(mobile){
+        margin: 120px auto;
+        position: relative;
+        align-self: center;
+        width: 55%;
+        font-size: 12px;
+    }
+}
+
+.who{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 8%;
+        height: 5%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    a{
+        :hover{opacity: .7;}
+    }
+    p{
+        font-family: 'Bold';
+        margin-left: 8px;
+        color: #fff;
+        span{
+            font-family: 'Regular';
+            color: #a8a8a8;
+            margin-left: 8px;
+        }
+    }
+    .dots{
+        position: absolute;
+        right: 0;
+        align-self: center;
+        width: 5%;
+    }
+}
+
+.posterContainer{
+    img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 8px;
+        border-radius: 8px;
+    }
+
+    .reactions{
+        display: flex;
+        margin-top: 10px;
+        
+        img{
+            width: 6%;
+            margin: 0 16px 0 0;
+            cursor: pointer;
+            &:hover{opacity: .5;}
+        }
+
+        .sharePost{
+            position: absolute;
+            right: 0;
+            margin: 0;
+        }
+        &:nth-child(2){
+            color: #fff;
+            display: block;
+            font-family: 'Medium';
+            span{font-family: 'Regular';}
+        }
+    }
+}
+
+.likes{
+    display: flex;
+    img{
+        border-radius: 50%;
+        align-self: center;
+    }
+    p{
+        margin-left: -8px;
+    }
+}
+
+.captions{
+    display: flex;
+    flex-direction: column;
+    a{
+        font-family: 'Medium';
+        span{
+            margin-left: 3px;
+            color: #fff;
+            cursor: initial;
+        }
+    }
+    p{
+        margin: 8px 0 8px 0;
+        cursor: pointer;
+    }
+    span{color: #a8a8a8;}
+    input{
+        color: #a8a8a8;
+        background-color: transparent;
+        font-size: 0.9rem;
+        padding: 5px 5px;
+        border: 0;
+        border-radius: 4px;
+        margin: 8px 0 8px 0;
+
+        @include responsive(mobile){
+            font-size: 12px;
+        }
+    }
+}
